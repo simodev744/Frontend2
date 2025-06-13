@@ -10,4 +10,11 @@ import {Navbar} from './navbar/navbar';
 })
 export class App {
   protected title = 'FrontendItDev';
+  navLinks = [
+    { path: '/dashboard', label: 'Dashboard', active: false },
+    { path: '/tickets', label: 'Tickets', active: false },
+    { path: '/utilisateurs', label: 'Utilisateurs', active: false }
+  ];
+
+
 }
