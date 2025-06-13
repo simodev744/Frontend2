@@ -4,7 +4,25 @@
   <span class="spacer"></span>
 
   <a mat-button routerLink="/dashboard" routerLinkActive="active-link">Home</a>
-  <a mat-button routerLink="/tickets" routerLinkActive="active-link">Tickets</a>
-  <a mat-button routerLink="/utilisateurs" routerLinkActive="active-link">Equipement</a>
-  <a mat-button routerLink="/utilisateurs" routerLinkActive="active-link">Panne</a>
+  <a mat-button routerLink="/tickets" routerLinkActive="active-link" [mat-menu-trigger-for]="Ticket">Tickets
+    <mat-icon>keyboard_arrow_down</mat-icon>
+  </a>
+  <a mat-button routerLink="/utilisateurs" routerLinkActive="active-link" [mat-menu-trigger-for]="equipment">Equipement
+    <mat-icon>keyboard_arrow_down</mat-icon>
+  </a>
+  <a mat-button routerLink="/utilisateurs" routerLinkActive="active-link" [mat-menu-trigger-for]="Pane">Panne
+    <mat-icon>keyboard_arrow_down</mat-icon>
+  </a>
+  <mat-menu #equipment>
+  <a mat-menu-item>Ajouter</a>
+  <a mat-menu-item>Afficher</a>
+  </mat-menu>
+  <mat-menu #Ticket>
+    <a mat-menu-item>Ajouter</a>
+    <a mat-menu-item>Afficher</a>
+  </mat-menu>
+  <mat-menu #Pane>
+    <a mat-menu-item>Ajouter</a>
+    <a mat-menu-item>Afficher</a>
+  </mat-menu>
 </mat-toolbar>
